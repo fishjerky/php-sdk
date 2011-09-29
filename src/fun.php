@@ -39,7 +39,8 @@ class FUN
 	public function __construct($config) {
 		$this->setAppId($config['appId']);
 		$this->setApiSecret($config['secret']);
-		$this->setRedirectUri($config['redirect_uri']);
+		if(!empty($config['redirect_uri']))
+			$this->setRedirectUri($config['redirect_uri']);
 	}
 
 	/**
